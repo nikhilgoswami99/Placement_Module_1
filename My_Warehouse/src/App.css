@@ -1,0 +1,103 @@
+.navbar {
+  background-color: rgb(43, 144, 226);
+  width: 100vw;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 2rem;
+}
+
+.list_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 2rem;
+  width: 100vw;
+}
+
+.card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 200px;
+  width: 20%;
+  border: 2px solid;
+  border-radius: 10px;
+  background-image: url("./assets/warehouse.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.card * {
+  position: relative;
+  z-index: 1;
+}
+
+.name,
+.city,
+.cluster,
+.space {
+  color: white;
+  font-size: large;
+}
+
+#name {
+  font-size: large;
+  padding: 0.2rem;
+  border-radius: 5px;
+  border: none;
+}
+
+#city {
+  font-size: large;
+  padding: 0.2rem;
+  border-radius: 5px;
+  border: none;
+}
+
+#cluster {
+  font-size: large;
+  padding: 0.2rem;
+  border-radius: 5px;
+  border: none;
+}
+
+#space {
+    font-size: large;
+    padding: 0.2rem;
+    border-radius: 5px;
+    border: none;
+}
