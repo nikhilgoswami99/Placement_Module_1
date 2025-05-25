@@ -5,11 +5,6 @@ import data from "../data.json";
 
 function Details() {
   let params = useParams();
-  useEffect(() => {
-      if (!localStorage.getItem("data")) {
-    localStorage.setItem("data", JSON.stringify(data));
-  }
-  }, []);
 
   let localData = JSON.parse(localStorage.getItem('data'));
   

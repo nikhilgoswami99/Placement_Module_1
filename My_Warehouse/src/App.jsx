@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 
 import { useNavigate } from 'react-router-dom';
@@ -8,6 +8,12 @@ function App() {
   let [city, setCity] = useState("");
   let [cluster, setCluster] = useState("");
   let [space, setSpace] = useState("");
+
+    useEffect(() => {
+        if (!localStorage.getItem("data")) {
+      localStorage.setItem("data", JSON.stringify(data));
+    }
+    }, []);
 
   let localData = JSON.parse(localStorage.getItem('data'));
 
