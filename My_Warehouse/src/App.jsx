@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
+import data from "./data.json";
 
 import { useNavigate } from 'react-router-dom';
 
