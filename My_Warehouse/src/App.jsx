@@ -9,14 +9,20 @@ function App() {
   let [city, setCity] = useState("");
   let [cluster, setCluster] = useState("");
   let [space, setSpace] = useState("");
+   const [localData, setLocalData] = useState([]);
 
-    useEffect(() => {
-        if (!localStorage.getItem("data")) {
+  useEffect(() => {
+    const storedData = localStorage.getItem("data");
+
+    if (storedData) {
+      setLocalData(JSON.parse(storedData));
+    } else {
       localStorage.setItem("data", JSON.stringify(data));
+      setLocalData(data); // Update state with default data
     }
-    }, []);
+  }, []);
 
-  let localData = JSON.parse(localStorage.getItem('data'));
+  // let Data = JSON.parse(localStorage.getItem('data'));
 
   const handleSearch = (e) => {
     setName(e.target.value);
