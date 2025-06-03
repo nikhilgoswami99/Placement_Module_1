@@ -85,3 +85,24 @@ label {
   margin-top: 0.5rem;
   font-weight: bold;
 }
+
+
+@media only screen and (max-width: 700px) {
+  .details_container {
+    width: 80vw;
+  }
+
+
+  .editBtn {
+  position: absolute;
+  right: 10%;
+  bottom: 84%;
+}
+
+.saveBtn {
+  position: absolute;
+  right: 25%;
+  bottom: 84%;
+}
+}
+
